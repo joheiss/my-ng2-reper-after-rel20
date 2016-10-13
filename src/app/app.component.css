@@ -1,0 +1,9 @@
+nav > a.menu-active {
+    color: #ee1c1b;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+nav > a {
+    margin-right: 20px;
+}

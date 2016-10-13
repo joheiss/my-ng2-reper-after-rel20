@@ -1,0 +1,19 @@
+
+<button class="btn btn-warning" (click)="onLoadDrugs()">Liste laden</button>
+<button class="btn btn-danger" (click)="onRemoveDrugs()">Liste löschen</button>
+
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let drug of (drugs$ | async)">
+        <h5 class="list-group-item-heading">{{drug.shortname}}</h5>
+        <p class="list-group-item-text">{{drug.name}}</p>
+    </li>
+</ul>
+<button class="btn btn-warning" (click)="onLoadGeos()">Geos laden</button>
+<button class="btn btn-danger" (click)="onRemoveGeos()">Geos löschen</button>
+
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let geo of (geos$ | async)">
+        <h5 class="list-group-item-heading">{{geo.cca2}}</h5>
+        <p class="list-group-item-text">{{geo.cca3}}</p>
+    </li>
+</ul>

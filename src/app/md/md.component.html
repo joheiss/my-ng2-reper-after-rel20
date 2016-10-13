@@ -1,0 +1,29 @@
+<md-sidenav-layout [class.m2app-dark]="isDarkTheme">
+    <md-card>
+        <md-card-title>Enter some data</md-card-title>
+        <form #formRef="ngForm" (ngSubmit)="onSubmit(formRef.value)">
+            <md-card-content>
+                <md-card class="app-input-section">
+                    <md-input name="firstname" placeholder="First name" ngModel required></md-input>
+                    <md-input name="nickname" #nickname placeholder="Nickname" maxlength="50" ngModel>
+                        <md-hint align="end">
+                            {{nickname.characterCount}} / 50
+                        </md-hint>
+                    </md-input>
+                </md-card>
+            </md-card-content>
+            <md-card-actions>
+                <button type="submit" md-raised-button color="primary">Submit</button>
+            </md-card-actions>
+        </form>
+        <md-card-footer>
+            {{formRef.value | json}}
+        </md-card-footer>
+    </md-card>
+
+    <md-list>
+        <md-list-item> Pepper </md-list-item>
+        <md-list-item> Salt </md-list-item>
+        <md-list-item> Paprika </md-list-item>
+    </md-list>
+</md-sidenav-layout>

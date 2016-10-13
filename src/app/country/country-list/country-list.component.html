@@ -1,0 +1,12 @@
+<p>Total countries: {{countries?.length}}</p>
+<ul>
+    <li *ngFor="let country of countries">
+        {{country?.isoCode}}
+        <ul>
+            <li *ngFor="let name of country.names">
+                {{name?.language}} {{name?.name}}
+            </li>
+        </ul>
+    </li>
+</ul>
+

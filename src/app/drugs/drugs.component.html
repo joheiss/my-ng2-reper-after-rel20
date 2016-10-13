@@ -1,0 +1,6 @@
+<button class="btn btn-warning" (click)="onLoadDrugs()">Liste laden</button>
+<button class="btn btn-danger" (click)="onRemoveDrugs()">Liste löschen</button>
+
+<jo-rep-drugs-list
+    [drugs]="(drugs$ | async)">
+</jo-rep-drugs-list>
